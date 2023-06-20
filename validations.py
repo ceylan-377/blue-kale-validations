@@ -2,14 +2,14 @@
 
 
 def validate_user(username, minlen):
-    """Checks if the recieved username matches the required conditions."""
+    """ Checks if the received username matches the required conditions."""
     if type(username) != str:
         raise TypeError("username must be a string")
     if minlen < 1:
-        raise ValueError("minlen must at least 1")
+        raise ValueError("minlen must at least be 1")
         
     if len(username) < minlen:
-        ereturn False
+        return False
     if not username.isalnum():
         return False
     # Usernames can't begin with a number
