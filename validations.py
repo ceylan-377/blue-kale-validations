@@ -7,7 +7,9 @@ def validate_user(username, minlen):
         raise TypeError("username must be a string")
     if minlen < 1:
         raise ValueError("minlen must at least 1")
-        
+    if username == "":
+        raise ValueError ('Username is empty.')
+
     if len(username) < minlen:
         ereturn False
     if not username.isalnum():
