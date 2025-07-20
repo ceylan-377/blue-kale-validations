@@ -9,7 +9,7 @@ def validate_user(username, minlen):
         raise ValueError("minlen must at least 1")
         
     if len(username) < minlen:
-        ereturn False
+        return False
     if not username.isalnum():
         return False
     # Usernames can't begin with a number
